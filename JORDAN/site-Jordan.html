@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style1.css">
+	<title>JORDAN</title>
+</head>
+
+<body class="Jordan">
+
+    <div class="jeu-conteneur">
+        <h1>Save the angel</h1>
+        <h2>Will you be smart enough to understand the enigmas?</h2>
+    
+        <p class="consigne">Enter the code :</p>
+    
+        <div class="cadenas-cases">
+            <input type="text" id="code1" min="0" max="9" placeholder="0">
+            <input type="text" id="code2" min="0" max="9" placeholder="0">
+            <input type="text" id="code3" min="0" max="9" placeholder="0">
+            <input type="text" id="code4" min="0" max="9" placeholder="0">
+        </div>
+    
+        
+		<button onclick="
+    const codeSaisi = document.getElementById('code1').value + 
+                      document.getElementById('code2').value + 
+                      document.getElementById('code3').value + 
+                      document.getElementById('code4').value;
+
+    if (codeSaisi === '1234') {
+        window.location.href = 'IMG/Rafayel3.png';
+    } else {
+        alert('Nan meit habbuz frair steuh plét j\'a vèe kon phihensse an touwa 🔒');
+    }
+" class="bouton-valider">Valider</button>
+
+	<div class="video-conteneur">
+		<video controls loop>
+			<source src="IMG/tungtungtung.mp4" type="video/mp4">
+			Votre navigateur ne prend pas en charge la lecture de vidéos.
+		</video>
+	</div>
+
+
+</body>
+</html>

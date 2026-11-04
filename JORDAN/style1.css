@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.Jordan {
+    /* Configuration stricte de l'image de fond centrée */
+    background-image: url('IMG/background.png'); 
+    background-size: cover;             
+    background-position: center center;        
+    background-repeat: no-repeat;       
+    background-attachment: fixed;       
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Zone globale centrée sur l'écran */
+.jeu-conteneur {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #ff4757;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #ff4757, 0 0 25px rgba(255, 71, 87, 0.7);
+}
+
+h2 {
+    color: #a4b0be;
+    font-size: 1.6rem;
+    font-weight: 300;
+	max-width: 900px;
+    margin: 15px auto 30px auto; 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+	 /* Style de l'encadrement */
+    background: rgba(25, 25, 30, 0.8); /* Fond sombre semi-transparent */
+    border: 2px solid #aa7c11;         /* Bordure en or foncé */
+    border-radius: 10px;               /* Coins arrondis */
+    padding: 15px 25px;                /* Espace intérieur pour le texte */
+    box-shadow: inset 0 0 10px #000000, 0 5px 15px rgba(0, 0, 0, 0.5); /* Relief */
+    backdrop-filter: blur(2px);        /* Floute légèrement le fond derrière */
+}
+
+.consigne {
+    font-size: 1.2rem;
+    color: #f1f2f6;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    background: rgba(35, 35, 45, 0.85); 
+    border: 1.5px solid #d4af37;       /* Bordure dorée un peu plus claire */
+    border-radius: 6px;
+    padding: 8px 20px;
+    display: inline-block;             /* Force le cadre à s'adapter à la largeur du texte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.cadenas-cases {
+    /* Changement majeur : On décroche le bloc pour le caler sur le cadenas en fond */
+    position: absolute;
+    top: 70%; /* Aligne verticalement le bloc pile sur la plaque métallique de l'image */
+    left: 58%;
+    transform: translate(-50%, -50%); /* Centre parfaitement horizontalement et verticalement */
+    
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; /* Écartement ajusté pour correspondre au design du cadenas */
+    
+    /* On enlève l'ancien boîtier gris car le cadenas de l'image sert maintenant de décor */
+    background: transparent; 
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Style des molettes à chiffres */
+.cadenas-cases input[type="text"] {
+    width: 80px;
+    height: 50px; /* Légèrement plus rectangulaire pour se fondre dans les encoches */
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #65727c;
+    color: #ffd700; 
+    background-color: rgba(20, 20, 25, 0.95); 
+    border: 3px solid #d4af37; 
+    border-radius: 6px;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.6); /* Fait briller le chiffre en or */
+}
+
+.cadenas-cases input[type="number"]:focus {
+    border-color: #ffd700; 
+    -webkit-text-stroke: 1.5px #ffd700; 
+    background-color: rgba(35, 35, 45, 0.95); 
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05); 
+}
+
+/* Supprime les petites flèches par défaut */
+.cadenas-cases input::-webkit-outer-spin-button,
+.cadenas-cases input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Positionnement du bouton de validation sous le cadenas */
+.bouton-valider {
+    position: absolute;
+    top: 80%; /* Se place automatiquement un peu plus bas que le cadenas */
+    background-color: #ff4757;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 71, 87, 0.4);
+    transition: all 0.2s ease;
+}
+
+.bouton-valider:hover {
+    background-color: #ff6b81;
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.7);
+    transform: scale(1.05);
+}
+
+.video-conteneur {
+    margin: 20px auto;
+    max-width: 200px;
+    width: 100%;
+    padding: 10px;
+	margin-top: -15%;
+    margin-left: 7%;
+}
+
+.video-conteneur video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
